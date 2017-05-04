@@ -27,14 +27,6 @@ app.use((req, res, next) => {
    next();
 });
 
-app.use((req, res, next) => {
-   var x = Math.ceil(Math.random() * 10);
-
-   if (x > 7) res.render('maintenance');
-
-   next();
-});
-
 app.get('/', (req, res) => {
    res.render('home', {
       title : 'Homepage',
@@ -43,8 +35,16 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-   res.render('about', {
-      pageTitle: 'About'
+   res.render('home', {
+      title : 'About',
+      msg   : 'Welcome to this epic page!'
+   });
+});
+
+app.get('/projects', (req, res) => {
+   res.render('home', {
+      title : 'projects',
+      msg   : 'Welcome to this epic page!'
    });
 });
 
