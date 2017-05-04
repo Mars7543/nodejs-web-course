@@ -43,7 +43,7 @@ app.get('/about', (req, res) => {
 
 app.get('/projects', (req, res) => {
    res.render('home', {
-      title : 'projects',
+      title : 'Projects',
       msg   : 'Welcome to this epic page!'
    });
 });
